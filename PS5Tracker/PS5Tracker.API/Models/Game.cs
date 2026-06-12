@@ -10,6 +10,7 @@ namespace PS5Tracker.API.Models
         public int? Rating { get; set; }
         public string? Notes { get; set; }
         public string? CoverUrl { get; set; }
+        public string? SteamAppId { get; set; }
         public DateTime DateAdded { get; set; } = DateTime.UtcNow;
         public DateTime? DateFinished { get; set; }
     }
