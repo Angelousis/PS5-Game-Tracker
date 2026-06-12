@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace PS5Tracker.API.Models
 {
     public class Game
@@ -9,8 +11,8 @@ namespace PS5Tracker.API.Models
         public string Status { get; set; } = "ToPlay";
         public int? Rating { get; set; }
         public string? Notes { get; set; }
+        [Column(TypeName = "text")]
         public string? CoverUrl { get; set; }
-        public string? SteamAppId { get; set; }
         public DateTime DateAdded { get; set; } = DateTime.UtcNow;
         public DateTime? DateFinished { get; set; }
     }
